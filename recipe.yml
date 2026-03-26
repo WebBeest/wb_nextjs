@@ -1,0 +1,20 @@
+name: "Web-Beest - NextJS"
+description: "Modules for using NextJS in Drupal"
+type: "Headless"
+install:
+  - jsonapi
+  - graphql
+  - next
+config:
+  import:
+    jsonapi: '*'
+    graphql: '*'
+    next: '*'
+  strict: false
+  actions:
+    user.role.administrator:
+      createIfNotExists:
+        label: 'Administrator'
+      grantPermissions:
+        - 'administer graphql configuration'
+        - 'bypass graphql access'
