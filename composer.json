@@ -11,7 +11,15 @@
 			"email": "info@web-beest.nl"
 		}
 	],
+	"extra": {
+		"patches": {
+			"drupal/decoupled_router": {
+				"Unable to resolve path on node in other language than default": "https://www.drupal.org/files/issues/2024-08-05/decouple_router-3111456-resolve-language-issue-63--get-translation-re-rolled-and-good-redirect.patch"
+			}
+		}
+	},
 	"require": {
+		"cweagans/composer-patches": "^2",
 		"drupal/graphql": "^4.13",
 		"drupal/next": "^2.1"
 	}
